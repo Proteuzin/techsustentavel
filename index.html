@@ -5,123 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechSustentável</title>
     <style>
+        body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             line-height: 1.6; 
             margin: 0; 
             padding: 20px; 
             box-sizing: border-box;
-            background: linear-gradient(-45deg, #e8f5e9, #c8e6c9, #e0f2f1, #f1f8e9);
-            background-size: 400% 400%;
-            animation: moverFundo 15s ease infinite;
-            color: #333; 
+            background-color: #0b0f12; /* Fundo Preto Cyberpunk */
+            color: #e2e8f0; 
             text-align: center; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             justify-content: center;
         }
-
-        @keyframes moverFundo {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         header { 
-            background: #2e7d32; 
-            color: white; 
-            padding: 40px 20px; 
-            border-radius: 12px; 
-            margin-bottom: 20px; 
-            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+            text-align: center;
+            margin-bottom: 30px; 
         }
-
-        
+        header h1 {
+            color: #00ff87; /* Verde Neon Absoluto */
+            font-size: 2.5rem;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 255, 135, 0.3);
+        }
+        header p { color: #94a3b8; margin: 0; font-size: 1.1rem; }
         main { 
-            background: rgba(255, 255, 255, 0.65); 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 30px; 
+            background: #131a1f; /* Painel Grafite Escuro Premium */
+            border: 1px solid #1e293b;
+            padding: 40px; 
             border-radius: 16px; 
-            box-shadow: 0 8px 32px 0 rgba(45, 106, 79, 0.08); 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); 
             max-width: 800px; 
             margin: 0 auto; 
-            text-align: left; 
             width: 100%;
             box-sizing: border-box;
         }
-        h1, h2 { margin-top: 0; }
+        main h2 { 
+            color: #00ff87; 
+            margin-top: 0;
+            font-size: 1.6rem;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+        main p { color: #cbd5e1; font-size: 1.05rem; }
         nav { 
             display: flex; 
             justify-content: space-around; 
-            gap: 15px;
-            background: rgba(232, 245, 233, 0.5); 
-            backdrop-filter: blur(4px);
-            padding: 15px; 
-            border-radius: 50px; 
-            margin: 25px 0; 
+            gap: 12px;
+            background: #0b0f12; 
+            padding: 10px; 
+            border-radius: 12px; 
+            margin: 30px 0; 
+            border: 1px solid #1e293b;
         }
         nav a { 
-            color: #2e7d32; 
+            color: #94a3b8; 
             text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.05em; 
-            padding: 10px 20px;
-            border-radius: 50px;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            font-weight: 600; 
+            padding: 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
             text-align: center;
             flex: 1;
         }
         nav a:hover { 
-            text-decoration: none; 
-            background-color: #2e7d32;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3);
+            background-color: rgba(0, 255, 135, 0.1);
+            color: #00ff87;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 135, 0.2);
         }
-
         .team { 
-            margin-top: 30px; 
-            border-top: 1px solid rgba(0,0,0,0.1); 
-            padding-top: 20px; 
-            color: #555; 
+            margin-top: 35px; 
+            border-top: 1px solid #1e293b; 
+            padding-top: 25px; 
         }
-
-        .team ul {
-            display: flex;
-            gap: 15px;
-            padding: 0;
-            list-style: none;
-        }
-
-        .team li {
-            background: rgba(255, 255, 255, 0.4);
-            border-left: 4px solid #2e7d32;
-            padding: 12px 15px;
-            border-radius: 6px;
-            flex: 1;
-            font-size: 14px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
+        .team h3 { color: #94a3b8; font-size: 1.1rem; margin-bottom: 15px; }
+        .team ul { display: flex; gap: 15px; padding: 0; margin: 0; list-style: none; }
+        .team li { background: #1a2329; border-top: 3px solid #00ff87; padding: 15px; border-radius: 8px; flex: 1; font-size: 14px; color: #cbd5e1; }
+        .team li strong { color: #00ff87; display: block; margin-bottom: 3px; font-size: 15px; }
         @media (max-width: 768px) {
             body { padding: 10px; }
-            header { padding: 30px 15px; }
-            main { padding: 20px; }
-            
-            nav { 
-                flex-direction: column; 
-                gap: 8px; 
-                border-radius: 16px;
-                padding: 10px;
-            }
-            nav a { padding: 12px; }
-
-            .team ul { 
-                flex-direction: column; 
-                gap: 10px; 
-            }
+            main { padding: 25px 20px; }
+            nav { flex-direction: column; border-radius: 12px; }
+            .team ul { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -130,17 +99,14 @@
         <h1>TechSustentável</h1>
         <p>Ideias Digitais para um Futuro Melhor</p>
     </header>
-
     <main>
         <h2>Nossa Proposta</h2>
         <p>O <strong>TechSustentável</strong> é um espaço digital colaborativo criado para explorar e divulgar como os avanços tecnológicos podem se aliar à sustentabilidade. Nosso objetivo é apresentar soluções de hardware, software e mudanças de hábito que protegem o meio ambiente no cotidiano, nas escolas e no ambiente corporativo.</p>
-
         <nav>
             <a href="tecnologia.html">🍃 Tecnologias Verdes</a>
             <a href="projetos.html">💡 Projetos Digitais</a>
             <a href="acoes.html">🔄 Ações Práticas</a>
         </nav>
-
         <div class="team">
             <h3>Integrantes do Grupo:</h3>
             <ul>
